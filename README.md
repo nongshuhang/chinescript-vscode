@@ -1,21 +1,40 @@
+# 🐉 ChineScript - 中文编程语言支持
+
+> **用中文写代码，让编程更亲切！**  
+> 在 VS Code 中编写、运行 `.ch` 文件，享受语法高亮、智能提示、一键执行与调试功能。
+
+[![Version](https://img.shields.io/visual-studio-marketplace/v/nongshuhang.chinescript?color=blue&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=nongshuhang.chinescript)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/nongshuhang.chinescript?color=green)](https://marketplace.visualstudio.com/items?itemName=nongshuhang.chinescript)
+[![License](https://img.shields.io/github/license/nongshuhang/chinescript-vscode?color=orange)](LICENSE)
 
 ---
 
-## ✅ 使用说明
+## 📦 安装方式
 
-1. 将上述内容复制到你项目的 `README.md`
-2. 确保项目根目录有 `LICENSE` 文件（MIT 即可）
-3. 如果你还没有解释器项目，建议尽快创建 `https://github.com/nongshuhang/chinescript` 并放一个简单说明
+### 方法一：通过 VS Code Marketplace（推荐）
+1. 打开 **VS Code**
+2. 进入扩展商店（快捷键 `Ctrl+Shift+X`）
+3. 搜索 **`ChineScript`**
+4. 点击 **Install** 即可！
+
+> 🔍 扩展全名：**ChineScript: Chinese Programming Language**
+
+### 方法二：手动安装（适用于无法访问 Marketplace 的用户）
+1. 前往 [Releases 页面](https://github.com/nongshuhang/chinescript-vscode/releases) 下载最新 `.vsix` 文件
+2. 在 VS Code 中按 `Ctrl+Shift+P`
+3. 输入并选择：**Extensions: Install from VSIX...**
+4. 选择下载的 `.vsix` 文件 → 安装完成！
 
 ---
 
-## 🎁 额外建议
+## 🚀 快速开始
 
-- 在 GitHub 仓库 **Settings → Social Preview** 中上传一张封面图（如代码截图 + Logo），提升分享效果
-- 在 VS Code Marketplace 的扩展描述中也粘贴此 README 内容（可在管理页编辑）
+1. 创建一个新文件，保存为 `hello.ch`
+2. 输入以下中文代码：
 
----
+```chinescript
+定义 主函数() {
+    输出("你好，世界！");
+}
 
-这份 README 不仅帮助用户快速上手，还展示了你的专业性和对中文编程生态的愿景。  
-
-需要我帮你生成 **中文版宣传海报文案**、**B站视频脚本**，或者 **配套解释器的简易文档** 吗？随时告诉我！🎉
+主函数();
