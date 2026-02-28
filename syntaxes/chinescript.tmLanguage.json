@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ChineScript",
+  "scopeName": "source.chinescript",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "match": "\\b(如果|否则如果|否则|循环|当|跳出|继续|返回|定义|类|尝试|捕获|抛出|且|或|非|真|假|空)\\b",
+      "name": "keyword.control.chinescript"
+    },
+    {
+      "match": "\\b(打印|输入|长度|类型|整数|浮点|字符串|列表|字典|范围|枚举)\\b",
+      "name": "support.function.builtin.chinescript"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.chinescript",
+          "begin": "//",
+          "end": "$"
+        },
+        {
+          "name": "comment.block.chinescript",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.chinescript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.chinescript",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.chinescript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.chinescript",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

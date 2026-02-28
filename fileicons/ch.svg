@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6a5af9"/>
+      <stop offset="100%" stop-color="#4d9de0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#grad)"/>
+  <text x="32" y="44" text-anchor="middle" fill="white" font-size="36" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Hiragino Sans GB, Source Han Sans SC, sans-serif" font-weight="bold">
+    中
+  </text>
+</svg>

@@ -1,0 +1,132 @@
+{
+  "name": "chinescript",
+  "displayName": "ChineScript Language Support",
+  "description": "中文编程语言支持（.ch 文件）— 支持运行、高亮、智能提示",
+  "version": "1.2.0",
+  "publisher": "NSH",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Education"
+  ],
+  "keywords": [
+    "chinescript",
+    "中文编程",
+    "ch",
+    "chinese programming"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:chinescript",
+    "onCommand:chinescript.runFile",
+    "onDebugResolve:chinescript"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "chinescript",
+        "aliases": [
+          "ChineScript",
+          "中文脚本"
+        ],
+        "extensions": [
+          ".ch"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./fileicons/ch.svg",
+          "dark": "./fileicons/ch.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "chinescript",
+        "scopeName": "source.chinescript",
+        "path": "./syntaxes/chinescript.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "chinescript",
+        "path": "./snippets/chinescript.code-snippets"
+      }
+    ],
+    "commands": [
+      {
+        "command": "chinescript.runFile",
+        "title": "Run ChineScript File",
+        "category": "ChineScript",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "when": "resourceExtname == '.ch'",
+          "command": "chinescript.runFile"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceExtname == '.ch'",
+          "command": "chinescript.runFile",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == '.ch'",
+          "command": "chinescript.runFile",
+          "group": "navigation"
+        }
+      ]
+    },
+    "debuggers": [
+      {
+        "type": "chinescript",
+        "label": "ChineScript",
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "program"
+            ],
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "要运行的 .ch 文件路径",
+                "default": "${file}"
+              }
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "type": "chinescript",
+            "request": "launch",
+            "name": "Run ChineScript File",
+            "program": "${file}"
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.9.3"
+  },
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/chinescript-vscode.git"
+  }
+}
